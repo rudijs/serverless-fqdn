@@ -24,6 +24,35 @@ Features:
 
 - `npm test`
 
+## Developer Workflow
+
+When you start coding run the typescript compiler in watch mode:
+
+- `npm run tsc -- -w`
+
+Or run it once off as required
+
+- `npm run tsc`
+
+For Typescript typings for modules that you use, check for an install if there is an npm @types module.
+
+If not create one using `dts-gen` and put it in the `types` folder. Example:
+
+- `npx dts-gen -m cuuid`
+
+Using the code editor VScode we can hide the compiled .js files when there is a corresponding .ts
+
+Settings for `.vscode/settings.json` (manual) or use File –> Preferences –> Settings (Workspace settings)
+
+```
+{
+  "files.exclude": {
+    "**/*.js.map": true,
+    "**/*.js": { "when": "$(basename).ts" }
+  }
+}
+```
+
 ## Deployment
 
 - cd into a serverless "service" (aka microservice or group of related functions)
