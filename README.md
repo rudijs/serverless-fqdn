@@ -19,6 +19,9 @@ Features:
 - `git clone git@github.com:rudijs/serverless-fqdn.git`
 - `cd serverless-fqdn`
 - `npm install`
+
+## Unit Tests
+
 - `npm test`
 
 ## Deployment
@@ -47,5 +50,32 @@ From the output above you can call the URLs direct using the `*.amazonaws.com/de
 
 Wait for a few minutes for the DNS to setup/propagate then try the custom URLs from the output.
 
-- `curl https://dev-api.rudijs.com`
-- `curl https://api.rudijs.com`
+- `curl https://dev-api.rudijs.com/users`
+- `curl https://api.rudijs.com/users`
+
+## Removal
+
+Delete domain names:
+
+- `sls delete_domain --stage dev`
+- `sls delete_domain --stage prod`
+
+Example command output:
+
+`Serverless: Custom domain api.rudijs.com was deleted.`
+
+Delete serverless code
+
+- `sls remove --stage dev`
+
+Example command output:
+
+```
+Serverless: Unable to remove basepath mapping.
+Serverless: Getting all objects in S3 bucket...
+Serverless: Removing objects in S3 bucket...
+Serverless: Removing Stack...
+Serverless: Checking Stack removal progress...
+................
+Serverless: Stack removal finished...
+```
