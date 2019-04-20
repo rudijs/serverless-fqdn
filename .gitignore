@@ -2,3 +2,7 @@ coverage
 node_modules
 .serverless
 
+# typescript output
+src/users/handler.d.ts
+src/users/handler.js
+src/users/handler.js.map
