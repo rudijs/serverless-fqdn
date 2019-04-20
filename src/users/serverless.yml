@@ -31,8 +31,8 @@ custom:
     endpointType: "edge"
 
   webpack:
-    webpackConfig: "../webpack.config.js"
+    webpackConfig: "../../webpack.config.js"
     includeModules:
-      packagePath: "../package.json"
+      packagePath: "../../package.json"
       forceExclude:
         - aws-sdk
