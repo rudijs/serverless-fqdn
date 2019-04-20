@@ -1,0 +1,35 @@
+{
+  "name": "serverless-fqdn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "jest --colors"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "babel-jest": "^24.7.1",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-source-map-support": "^2.0.1",
+    "cuuid": "^0.2.1",
+    "jest": "^24.7.1",
+    "mocha": "^6.1.4",
+    "serverless-domain-manager": "^3.2.1",
+    "serverless-webpack": "^5.2.0",
+    "terser-webpack-plugin": "^1.2.3",
+    "typescript": "^3.4.4",
+    "webpack": "^4.30.0"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/lib/*.{js,jsx}",
+      "src/lib/**/*.{js,jsx}"
+    ]
+  }
+}
